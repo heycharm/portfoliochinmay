@@ -104,38 +104,39 @@ export const ProjectsSection = () => {
         </AnimatedSection> */}
         
         {/* Mobile View Projects (Grid for small screens) */}
-        <div className="grid md:hidden grid-cols-1 gap-8 mb-12">
-          {filteredProjects.slice(0, 3).map((project, index) => (
-            <AnimatedSection key={project.title} delay={index * 0.1 + 0.2}>
-              <ProjectCard project={project} />
-            </AnimatedSection>
-          ))}
-        </div>
+       
         
         {/* Desktop View Projects (Carousel for medium and larger screens) */}
-        <div className="hidden md:block">
-          <Carousel opts={{
-            align: "start",
-            loop: true
-          }} className="w-full">
-            <CarouselContent>
-              {filteredProjects.map((project, index) => (
-                <CarouselItem key={project.title} className="md:basis-1/2 lg:basis-1/3 pl-4">
-                  <AnimatedSection delay={index * 0.1}>
-                    <ProjectCard project={project} />
-                  </AnimatedSection>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center mt-8">
-              <CarouselPrevious className="static mx-2 transform-none bg-secondary/80 hover:bg-primary/80 text-white border-primary/30 hover-glow" />
-              <CarouselNext className="static mx-2 transform-none bg-secondary/80 hover:bg-primary/80 text-white border-primary/30 hover-glow" />
-            </div>
-          </Carousel>
-        </div>
+     {/* Projects Carousel for all devices (mobile + desktop) */}
+<div className="w-full">
+  <Carousel opts={{
+    align: "start",
+    loop: true
+  }} className="w-full">
+    <CarouselContent>
+      {filteredProjects.map((project, index) => (
+        <CarouselItem 
+          key={project.title} 
+          className="basis-full md:basis-1/2 lg:basis-1/3 pl-4"
+        >
+          <AnimatedSection delay={index * 0.1}>
+            <ProjectCard project={project} />
+          </AnimatedSection>
+        </CarouselItem>
+      ))}
+    </CarouselContent>
+    
+    {/* Navigation Buttons */}
+    <div className="flex justify-center mt-8">
+      <CarouselPrevious className="static mx-2 transform-none bg-secondary/80 hover:bg-primary/80 text-white border-primary/30 hover-glow" />
+      <CarouselNext className="static mx-2 transform-none bg-secondary/80 hover:bg-primary/80 text-white border-primary/30 hover-glow" />
+    </div>
+  </Carousel>
+</div>
+
         
         {/* View All Projects Button */}
-        {/* <AnimatedSection delay={0.6} className="flex justify-center mt-12">
+        <AnimatedSection delay={0.6} className="flex justify-center mt-12">
           <Button 
             variant="outline" 
             size="lg" 
@@ -143,7 +144,7 @@ export const ProjectsSection = () => {
           >
             View All Projects
           </Button>
-        </AnimatedSection> */}
+        </AnimatedSection>
       </div>
     </section>
   );

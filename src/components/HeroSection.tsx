@@ -102,7 +102,7 @@ export const HeroSection = () => {
           style={{ y: scrollY * -0.2 }}
           className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight letter-spacing-wide"
         >
-          This is <span className="text-gradient"><br/>Chinmay Pundir.</span>
+          This is <span className="text-gradient"><br/>CHINMAY.</span>
         </motion.h1>
         
         <motion.p 
