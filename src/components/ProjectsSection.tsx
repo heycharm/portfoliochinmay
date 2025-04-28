@@ -136,7 +136,7 @@ export const ProjectsSection = () => {
 
         
         {/* View All Projects Button */}
-        <AnimatedSection delay={0.6} className="flex justify-center mt-12">
+        {/* <AnimatedSection delay={0.6} className="flex justify-center mt-12">
           <Button 
             variant="outline" 
             size="lg" 
@@ -144,7 +144,7 @@ export const ProjectsSection = () => {
           >
             View All Projects
           </Button>
-        </AnimatedSection>
+        </AnimatedSection> */}
       </div>
     </section>
   );
