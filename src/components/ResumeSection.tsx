@@ -13,10 +13,10 @@ import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { motion } from 'framer-motion';
 
 const experiences = [{
-  position: 'Frontend Developer Intern',
-  company: 'Aaradhari',
-  period: 'Jan 2025 - Present',
-  description: 'Developed modern websites for Aardhari using React, JavaScript, and Tailwind CSS. Designed fully responsive layouts and optimized site performance for a seamless user experience.'
+  position: 'Software Developer',
+  company: 'ML Infomap Pvt. Ltd.',
+  period: 'July 2025 - Present',
+  description: 'Developing and maintaining responsive, data-driven web applications using React.js, JavaScript, and SQL, with a focus on reusable code and optimized performance.Collaborating in an agile team for feature delivery, code reviews, and best practice implementation.'
 }, ];
 
 const education = [{
