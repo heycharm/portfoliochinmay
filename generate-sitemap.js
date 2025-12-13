@@ -8,7 +8,7 @@ const links = [
 ];
 
 const generateSitemap = async () => {
-  const sitemap = new SitemapStream({ hostname: 'https://chinmaypundir.me' });
+  const sitemap = new SitemapStream({ hostname: 'https://chinmaypundir.tech' });
   const writeStream = createWriteStream('./public/sitemap.xml');
 
   sitemap.pipe(writeStream);
